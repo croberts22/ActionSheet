@@ -11,11 +11,13 @@ struct ActionItemView: View {
     
     let item: ActionItem
     @Binding var isVisible: Bool
+    @Binding var completionHandler: (() -> ())?
     
     var body: some View {
         Button {
             withAnimation(.spring()) {
                 item.action()
+                completionHandler?()
                 isVisible = false
             }
         } label: {
@@ -51,7 +53,7 @@ struct ActionItem_Previews: PreviewProvider {
         ]
         
         if isVisible {
-            ActionSheet(items: items, isVisible: $isVisible)
+            ActionSheet(items: items)
                 .animation(.spring())
                 .transition(.move(edge: .bottom))
         }

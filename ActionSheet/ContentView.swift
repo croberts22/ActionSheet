@@ -14,7 +14,9 @@ struct ContentView: View {
     let items = [
         ActionItem(image: Image(systemName: "square.and.arrow.up"), title: "Share",
                    selected: true,
-                   action: {},
+                   action: {
+                    print("Selected Share")
+                   },
                    type: .default),
         ActionItem(image: Image(systemName: "trash"),
                    title: "Remove",
@@ -35,7 +37,9 @@ struct ContentView: View {
             if isVisible {
                 VStack {
                     Spacer()
-                    ActionSheet(items: items, isVisible: $isVisible)
+                    ActionSheet(items: items) {
+                        isVisible = false
+                    }
                 }
                 .animation(.spring())
                 .transition(.move(edge: .bottom))

@@ -18,6 +18,7 @@
 		2C98E118265B4E6700F3DB63 /* ActionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98E117265B4E6700F3DB63 /* ActionItemView.swift */; };
 		2C98E11A265B4E8D00F3DB63 /* ActionItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98E119265B4E8D00F3DB63 /* ActionItemType.swift */; };
 		2C98E11C265B4EA200F3DB63 /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98E11B265B4EA200F3DB63 /* ActionButtonStyle.swift */; };
+		2CAB6F47265E0E38009E8FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB6F46265E0E38009E8FAE /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2C98E117265B4E6700F3DB63 /* ActionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionItemView.swift; sourceTree = "<group>"; };
 		2C98E119265B4E8D00F3DB63 /* ActionItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionItemType.swift; sourceTree = "<group>"; };
 		2C98E11B265B4EA200F3DB63 /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
+		2CAB6F46265E0E38009E8FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				2C51F45D2655BA2C0080B485 /* ActionSheet.swift */,
 				2C98E117265B4E6700F3DB63 /* ActionItemView.swift */,
 				2C98E119265B4E8D00F3DB63 /* ActionItemType.swift */,
+				2CAB6F46265E0E38009E8FAE /* ViewController.swift */,
 			);
 			path = ActionSheet;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				2C247E7E265555E800C9B7C5 /* ActionItem.swift in Sources */,
 				2C247E6A2655552800C9B7C5 /* AppDelegate.swift in Sources */,
 				2C247E6C2655552800C9B7C5 /* SceneDelegate.swift in Sources */,
+				2CAB6F47265E0E38009E8FAE /* ViewController.swift in Sources */,
 				2C98E11A265B4E8D00F3DB63 /* ActionItemType.swift in Sources */,
 				2C51F45E2655BA2C0080B485 /* ActionSheet.swift in Sources */,
 				2C247E6E2655552800C9B7C5 /* ContentView.swift in Sources */,

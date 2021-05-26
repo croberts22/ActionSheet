@@ -11,13 +11,14 @@ struct ActionSheet: View {
     
     let items: [ActionItem]
     
-    @Binding var isVisible: Bool
+    @State var isVisible: Bool = true
+    @State var completionHandler: (() -> ())?
     
     var body: some View {
         VStack {
             VStack(spacing: 0.0) {
                 ForEach(items) {
-                    ActionItemView(item: $0, isVisible: $isVisible)
+                    ActionItemView(item: $0, isVisible: $isVisible, completionHandler: $completionHandler)
                     if $0.id != items.last?.id {
                         Divider()
                             .padding(.horizontal)
@@ -33,6 +34,7 @@ struct ActionSheet: View {
                     Button {
                         withAnimation(.spring()) {
                             isVisible = false
+                            completionHandler?()
                         }
                     } label: {
                         HStack {
@@ -48,6 +50,10 @@ struct ActionSheet: View {
             .cornerRadius(12.0)
             .padding(.horizontal)
         }
+    }
+    
+    func show() {
+        isVisible.toggle()
     }
 }
 
@@ -73,7 +79,7 @@ struct ActionSheet_Previews: PreviewProvider {
                 .ignoresSafeArea()
             
             if isVisible {
-                ActionSheet(items: items, isVisible: $isVisible)
+                ActionSheet(items: items, isVisible: true)
             }
         }
         .preferredColorScheme(.dark)
