@@ -12,13 +12,13 @@ struct ActionSheet: View {
     let items: [ActionItem]
     
     @State var isVisible: Bool = true
-    @State var completionHandler: (() -> ())?
+    var completionHandler: (() -> ())?
     
     var body: some View {
         VStack {
             VStack(spacing: 0.0) {
                 ForEach(items) {
-                    ActionItemView(item: $0, isVisible: $isVisible, completionHandler: $completionHandler)
+                    ActionItemView(item: $0, isVisible: $isVisible, completionHandler: completionHandler)
                     if $0.id != items.last?.id {
                         Divider()
                             .padding(.horizontal)

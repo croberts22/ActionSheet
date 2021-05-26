@@ -32,31 +32,19 @@ final class ViewController: UIViewController {
     @objc private func display() {
         let items = [
             ActionItem(image: Image(systemName: "square.and.arrow.up"), title: "Share", action: {
-                print("yay share!")
+                print("Nice share!")
             }),
-            ActionItem(image: Image(systemName: "paperplane"), title: "Really Share It", action: {
-                print("you really shared it!")
+            ActionItem(image: Image(systemName: "paperplane"), title: "Send a Paper Plane", action: {
+                print("Woosh!")
             })
         ]
         
-        let actionSheet = ActionSheet(items: items, isVisible: false) {
-            print("nice")
+        let actionSheetViewController = ActionSheetViewController(items: items)
+        actionSheetViewController.completionHandler = {
+            print("Action sheet completed!")
         }
-        
-        let controller = UIHostingController(rootView: actionSheet)
-        controller.view.translatesAutoresizingMaskIntoConstraints = false
-        controller.view.backgroundColor = .clear
-        addChild(controller)
-        view.addSubview(controller.view)
-        controller.didMove(toParent: self)
-        
-        NSLayoutConstraint.activate([
-            controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-        
-        actionSheet.show()
+
+        present(actionSheetViewController, animated: true)
     }
     
 }

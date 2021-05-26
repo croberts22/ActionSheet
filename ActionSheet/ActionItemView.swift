@@ -11,7 +11,7 @@ struct ActionItemView: View {
     
     let item: ActionItem
     @Binding var isVisible: Bool
-    @Binding var completionHandler: (() -> ())?
+    var completionHandler: (() -> ())?
     
     var body: some View {
         Button {

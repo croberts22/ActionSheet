@@ -19,6 +19,7 @@
 		2C98E11A265B4E8D00F3DB63 /* ActionItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98E119265B4E8D00F3DB63 /* ActionItemType.swift */; };
 		2C98E11C265B4EA200F3DB63 /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98E11B265B4EA200F3DB63 /* ActionButtonStyle.swift */; };
 		2CAB6F47265E0E38009E8FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB6F46265E0E38009E8FAE /* ViewController.swift */; };
+		2CAB6F49265F096A009E8FAE /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB6F48265F096A009E8FAE /* ActionSheetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2C98E119265B4E8D00F3DB63 /* ActionItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionItemType.swift; sourceTree = "<group>"; };
 		2C98E11B265B4EA200F3DB63 /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
 		2CAB6F46265E0E38009E8FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CAB6F48265F096A009E8FAE /* ActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				2C98E117265B4E6700F3DB63 /* ActionItemView.swift */,
 				2C98E119265B4E8D00F3DB63 /* ActionItemType.swift */,
 				2CAB6F46265E0E38009E8FAE /* ViewController.swift */,
+				2CAB6F48265F096A009E8FAE /* ActionSheetViewController.swift */,
 			);
 			path = ActionSheet;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAB6F49265F096A009E8FAE /* ActionSheetViewController.swift in Sources */,
 				2C247E7E265555E800C9B7C5 /* ActionItem.swift in Sources */,
 				2C247E6A2655552800C9B7C5 /* AppDelegate.swift in Sources */,
 				2C247E6C2655552800C9B7C5 /* SceneDelegate.swift in Sources */,
