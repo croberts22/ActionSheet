@@ -15,40 +15,51 @@ struct ActionSheet: View {
     var completionHandler: (() -> ())?
     
     var body: some View {
-        VStack {
-            VStack(spacing: 0.0) {
-                ForEach(items) {
-                    ActionItemView(item: $0, isVisible: $isVisible, completionHandler: completionHandler)
-                    if $0.id != items.last?.id {
-                        Divider()
-                            .padding(.horizontal)
-                    }
-                }
+        ZStack {
+            Button {
+                completionHandler?()
+            } label: {
+               Text("")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            .background(Color.white)
-            .cornerRadius(12.0)
-            .padding(.horizontal)
+
             
             VStack {
-                HStack {
-                    Button {
-                        withAnimation(.spring()) {
-                            isVisible = false
-                            completionHandler?()
-                        }
-                    } label: {
-                        HStack {
-                            Spacer()
-                            Text("Cancel")
-                            Spacer()
+                Spacer()
+                VStack(spacing: 0.0) {
+                    ForEach(items) {
+                        ActionItemView(item: $0, isVisible: $isVisible, completionHandler: completionHandler)
+                        if $0.id != items.last?.id {
+                            Divider()
+                                .padding(.horizontal)
                         }
                     }
-                    .buttonStyle(ActionButtonStyle())
                 }
+                .background(Color.white)
+                .cornerRadius(12.0)
+                .padding(.horizontal)
+                
+                VStack {
+                    HStack {
+                        Button {
+                            withAnimation(.spring()) {
+                                isVisible = false
+                                completionHandler?()
+                            }
+                        } label: {
+                            HStack {
+                                Spacer()
+                                Text("Cancel")
+                                Spacer()
+                            }
+                        }
+                        .buttonStyle(ActionButtonStyle())
+                    }
+                }
+                .background(Color.white)
+                .cornerRadius(12.0)
+                .padding(.horizontal)
             }
-            .background(Color.white)
-            .cornerRadius(12.0)
-            .padding(.horizontal)
         }
     }
     
